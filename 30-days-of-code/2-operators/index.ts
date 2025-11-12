@@ -71,11 +71,13 @@ function readLine(): string {
  *  3. INTEGER tax_percent
  */
 
-function solve(meal_cost: number, tip_percent: number, tax_percent: number): void {
-    const tip = (tip_percent/100) * meal_cost;
-    const tax = (tax_percent/100) * meal_cost;
-    const sum = meal_cost + tip + tax
-    console.log(Math.round(sum));
+export function solve(meal_cost: number, tip_percent: number, tax_percent: number): number {
+    const tip = meal_cost * (tip_percent/100);
+    const tax = meal_cost * (tax_percent/100);
+    const roundedSum = Math.round(meal_cost + tip + tax);
+    console.log(roundedSum);
+
+    return roundedSum
 }
 
 function main() {
@@ -87,6 +89,3 @@ function main() {
 
     solve(meal_cost, tip_percent, tax_percent);
 }
-
-
-export {}
