@@ -73,3 +73,7 @@ function main() {
     console.log((d + d2).toFixed(1));
     console.log(s + s2);
 }
+
+// npx tsx 30-days-of-code/1-data-types.ts < 30-days-of-code/input.txt > 30-days-of-code/output.txt
+
+export {}
