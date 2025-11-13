@@ -47,7 +47,7 @@ let inputLines: string[] = [];
 let currentLine: number = 0;
 
 process.stdin.on('data', function (inputStdin: string): void {
-    inputString += inputStdin;
+    inputString +=  inputStdin;
 });
 
 process.stdin.on('end', function (): void {
@@ -60,7 +60,7 @@ function readLine(): string {
     return inputLines[currentLine++];
 }
 
-function main() {
+export function main() {
     const i: number = 4;
     const d: number = 4.0;
     const s: string = "HackerRank ";
@@ -68,6 +68,7 @@ function main() {
     const i2: number = parseInt(readLine());
     const d2: number = parseFloat(readLine());
     const s2: string = readLine();
+
 
     console.log(i + i2);
     console.log((d + d2).toFixed(1));
